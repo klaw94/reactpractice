@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(254, 255, 165) 0%,
+          rgb(255, 232, 182) 90%
+        );
+        font-family: monospace;
+        border: 2px transparent;
+        box-shadow: 5px 5px 10px 2px grey;
+        border-radius: 5px;
+        margin: 50px 320px 50px 320px;
+        padding: 20px 0 20px 0;
+      }
+      h1 {
+        color: #e46161;
+        text-align: center;
+        font-size: 43px;
+        margin: 20px 0 15px 0;
+        padding: 0 auto;
+      }
+      h2 {
+        color: #f1b963;
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;
+        max-width: 80%;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 15px;
+        margin: 30px 50px 10px 50px;
+        text-align: left;
+      }
+      a {
+        text-decoration: none;
+        transition: 150ms ease-in-out;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .mubi {
+        text-align: left;
+        margin: 0 50px 0px 50px;
+        font-size: 15px;
+      }
+
+      button {
+        display: block;
+        padding: 15px 30px;
+        margin: 0 auto 20px auto;
+        background: #e46161;
+        border: 2px #e46161;
+        color: white;
+        font-size: 15px;
+        border-radius: 10px;
+        transition: 150ms ease-in-out;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px 2px grey;
+      }
+      button:hover {
+        background: white;
+        color: #e46161;
+      }
+
+      .credits {
+        margin: 10px 50px 0px 50px;
+        color: grey;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Constant</h1>
+    <h2>A film by Beny Wagner & Sasha Litvintseva</h2>
+    <img
+      src="https://sajifilms.files.wordpress.com/2021/11/constant-still-1-1.png?w=1400&h="
+      alt="Still constant"
+      width="600"
+    />
+    <p>
+      <em>"Constant"</em> is a journey through the social and political
+      histories of measurement. For most of recorded history, the human body was
+      the measure of all things. “Constant” asks what led measurement to depart
+      from the body and become a science unto itself. The film explores three
+      shifts in the history of measurement standardization, from the land
+      surveying that drove Early Modern European land privatization, to the
+      French Revolution that drove the Metric Revolution, to the conceptual
+      dematerialisation of measurement in the contemporary era of Big Science.
+      Each chapter traces the relationship of measurement standardization to
+      ideas of egalitarianism, agency, justice, and power. Cinematic and
+      technical images that begin as products of measurement systems are
+      stretched beyond their functions to describe the resistance of lived
+      experience to symbolic abstractions.
+    </p>
+    <div class="mubi">
+      <a href="https://mubi.com/films/constant" target="_blank">
+        Watch the film in MUBI
+      </a>
+    </div>
+    <br />
+    <button>Ask For A Link</button>
+    <div class="credits">
+      Webpage build by
+      <a href="https://www.sajifilms.com" style="color: grey" target="_blank"
+        >Claudia Saji
+      </a>
+    </div>
+
+    <script>
+      function askScreener() {
+        let name = prompt("What's your name?");
+        let email = prompt("What's your email address?");
+        let age = prompt("How old are you?");
+
+        if (age <= 18) {
+          alert(`Sorry ${name}, you are too young to watch this film 🙈`);
+        } else {
+          alert(`Thanks ${name}! We will send you an email soon!`);
+        }
+      }
+      let contactButton = document.querySelector("button");
+      contactButton.addEventListener("click", askScreener);
+    </script>
+  </body>
+</html>
